@@ -1,0 +1,130 @@
+/* Estilo global */ 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+
+}
+/* Paletas global */ 
+:root{
+    /* Paleta de colores de la página web */
+    --bg-color: #101010;
+    --primary-color: #FEFEFE;
+    --accentY-color: #FCED22;
+    --accentC-color: #67C6C0;
+    --accentB-color: #3257A2;
+    --accentO-color: #F27E2A;
+    --accentP-color: #F8B8D2; 
+
+    /* Paleta de tamaños de texto */
+    --p-font: 1rem;
+    --big-font: 2rem;
+    --tittle-font:1.6rem;
+    --quote-font: 1.3rem;
+}
+/* NAVBAR */
+body{
+    background-color:var(--bg-color);
+    color: var(--primary-color);
+}
+.logo img{
+    width: 100%;
+    height: auto;
+}
+header{
+    position:fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 35px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .50s ease;
+}
+/* NAV */
+.navlist{
+    display: flex;
+}
+.navlist a{
+    display: inline-block;
+    margin: 0 35px;
+    color: var(--primary-color);
+    font-size: 1rem;
+    transition: all .6s ease;
+}
+.navlist a:hover{
+    color: var(--accentY-color);
+}
+/* SECCIONES */
+section{
+    padding: 0 14%;
+}
+/* SECCION 1 */
+.seccion1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+/* IMAGEN */
+.pac_img img{
+    /* width: 100%;
+    height: auto; */
+    width: 437px;
+    height: 232px;
+    flex-shrink: 0;
+
+}
+/* TEXTO */
+.seccion1_text{
+    width: 100%px;
+}
+.seccion1_text h1{
+    font-size:var(--big-font);
+    font-weight: 800;
+    margin: 15px 0;
+    color: var(--accentY-color);
+    
+}
+.seccion1_text h2{
+    font-size:var(--tittle-font);
+    font-weight: 600;
+    margin: 15px 0;
+    color: var(--primary-color);
+   
+}
+.seccion1_text p{
+    font-size:var(--p-font);
+    margin: 15px 0;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+/* BOTON */
+.seccion1_btn{
+    display: inline-block;
+    padding: 13px 32px;
+    background: var(--accentP-color);
+    border-radius: 50px;
+    transition: all .6s ease;
+
+}
+.seccion1_btn a{
+    color: var(--bg-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.seccion1_btn:hover{
+    transform: scale(1.1);
+    background-color: var(--accentY-color);
+}
+
