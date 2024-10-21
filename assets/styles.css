@@ -1,4 +1,4 @@
-/* Estilo global */ 
+/* Estilo global */
 *{
     padding: 0;
     margin: 0;
@@ -8,7 +8,7 @@
     font-family: 'Poppins', sans-serif;
 
 }
-/* Paletas global */ 
+/* Paletas global */
 :root{
     /* Paleta de colores de la página web */
     --bg-color: #101010;
@@ -17,7 +17,7 @@
     --accentC-color: #67C6C0;
     --accentB-color: #3257A2;
     --accentO-color: #F27E2A;
-    --accentP-color: #F8B8D2; 
+    --accentP-color: #F8B8D2;
 
     /* Paleta de tamaños de texto */
     --p-font: 1rem;
@@ -34,6 +34,7 @@ body{
     width: 100%;
     height: auto;
 }
+/* Header */
 header{
     position:fixed;
     width: 100%;
@@ -44,7 +45,14 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: var(--bg-color);
     transition: all .50s ease;
+}
+@media(max-width: 1770px){
+
+    header{
+        padding: 20px 4%;
+    }
 }
 /* NAV */
 .navlist{
@@ -67,6 +75,7 @@ section{
 /* SECCION 1 */
 .seccion1{
     position: relative;
+    padding-top: 150px;
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -76,14 +85,39 @@ section{
     align-items: center;
     gap: 2rem;
 }
-/* IMAGEN */
-.pac_img img{
-    /* width: 100%;
-    height: auto; */
-    width: 437px;
-    height: 232px;
-    flex-shrink: 0;
+@media (max-width: 768px) {
+    /* Pntallas pequeñas */
+    .seccion1 {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 
+    .seccion1_text {
+        margin-bottom: 20px;
+    }
+
+    .pac_img {
+        display: flex;
+        justify-content: center;
+    }
+}
+/* IMAGEN */
+.pac_img img {
+    width: 100%;
+    height: auto;
+    max-width: 437px; /* Pantallas completa */
+}
+
+@media (max-width: 1024px) {
+    .pac_img img {
+        max-width: 300px; /* Pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .pac_img img {
+        max-width: 200px; /* Pntallas pequeñas */
+    }
 }
 /* TEXTO */
 .seccion1_text{
@@ -94,14 +128,14 @@ section{
     font-weight: 800;
     margin: 15px 0;
     color: var(--accentY-color);
-    
+
 }
 .seccion1_text h2{
     font-size:var(--tittle-font);
     font-weight: 600;
     margin: 15px 0;
     color: var(--primary-color);
-   
+
 }
 .seccion1_text p{
     font-size:var(--p-font);
@@ -138,8 +172,54 @@ section{
     display: block;
     margin: 35px 0;
     height: 54px;
-    transition: all .6s;
+    transition: all 0.6s ease;
 }
-.redes img :hover{
+.redes img:hover{
     transform: scale(1.1);
+}
+@media (max-width: 768px) {
+    /* Pantallas pequeñas */
+    .redes img{
+        height: 35px;
+    }
+    .seccion1 {
+        padding-bottom: 100px;
+    }
+}
+@media (max-width: 768px) {
+    /* Pantallas medianas */
+    .redes img{
+        height: 45px;
+    }
+    
+}
+/* SCROLL */
+.scroll{
+    position: absolute;
+    top: 92%;
+    right: 7%;
+    transform: translateY(-50%);
+}
+.scroll a{
+    font-size: 16px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.scroll img{
+    width: 29px;
+    height: 29px;
+    margin-right: 6px;
+    transition: all 0.6s ease;
+}
+.scroll img:hover{
+    transform: scale(1.1);
+}
+/* Estas caracteristicas se agregaran solo cuando sea de 1770 px o menos */
+@media(max-width: 1770px){
+
+    scroll{
+        right: 4%;
+    }
 }
