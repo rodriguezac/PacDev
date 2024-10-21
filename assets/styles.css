@@ -127,4 +127,19 @@ section{
     transform: scale(1.1);
     background-color: var(--accentY-color);
 }
-
+/* REDES */
+.redes{
+    position: absolute;
+    top: 50%;
+    padding: 0 7%;
+    transform: translateY(-50%);
+}
+.redes img{
+    display: block;
+    margin: 35px 0;
+    height: 54px;
+    transition: all .6s;
+}
+.redes img :hover{
+    transform: scale(1.1);
+}
