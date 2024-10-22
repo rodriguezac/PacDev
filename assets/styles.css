@@ -4,7 +4,6 @@
     margin: 0;
     box-sizing: border-box;
     list-style: none;
-    text-decoration: none;
     font-family: 'Poppins', sans-serif;
 
 }
@@ -15,10 +14,6 @@ hr {
     height: 1px;
     background-color: var(--primary-color);
     opacity: 0.4;
-}
-ol, ul {
-    list-style-position: inside;
-    margin-left: 20px;
 }
 /* Paletas global */
 :root{
@@ -76,6 +71,7 @@ header{
     margin: 0 35px;
     color: var(--primary-color);
     font-size: 1rem;
+    text-decoration: none;
     transition: all .6s ease;
 }
 .navlist a:hover{
@@ -85,6 +81,7 @@ header{
 section{
     padding: 0 14%;
 }
+
 /* SECCION 1 */
 .seccion1{
     position: relative;
@@ -169,6 +166,7 @@ section{
     color: var(--bg-color);
     font-size: 0.9rem;
     font-weight: 600;
+    text-decoration: none;
 }
 .seccion1_btn:hover{
     transform: scale(1.1);
@@ -245,7 +243,6 @@ html {
     padding-top: 0px;
     padding-bottom: 5px;
     width: 100%;
-    /* height: 55vh; */
     background-size: cover;
     background-position: center;
 }
@@ -342,6 +339,8 @@ seccion2_text p{
     font-size: 1rem;
     color: var(--primary-color);
     max-width: 800px;
+    list-style-type: decimal;
+    padding-left: 20px;
     margin: 0 auto;
     margin-top: 30px;
 }
@@ -354,9 +353,7 @@ seccion2_text p{
 .etapas_lista li b:hover {
     color: #3257A2;
 }
-ol {
-    list-style-type: decimal; 
-}
+
 /* SECCION 4 */
 .seccion4 {
     text-align: justify;
@@ -400,14 +397,14 @@ ol {
 .seccion5_lista ul {
     margin-bottom: 15px;
     line-height: 1.5;
+    list-style-type: disc;
+    padding-left: 20px;
     transition: all 0.6s ease;
 }
 .seccion5_lista ul b:hover {
     color: #3257A2;
 }
-ul {
-    list-style-type: disc; 
-}
+
 @media (max-width: 768px) {
     /* Pantallas pequeñas */
     .seccion5 {
@@ -419,8 +416,9 @@ ul {
         font-size: 6vw; 
     }
 }
+
 /* PERFIL */
-.perfil {
+.perfil{
     display: flex;
     align-items: center;
     gap: 20px;
@@ -433,6 +431,14 @@ ul {
 .perfil h2{
     color: var(--accentP-color);
 
+}
+.perfil_text p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
 }
 /* BOTON */
 .perfil_btn{
@@ -462,8 +468,8 @@ ul {
 .foto img {
     width: 100%;
     height: auto;
-    max-width: 437px; /* Pantallas completa */
-    border-radius: 50px;
+    max-width: 200px; /* Pantallas completa */
+    border-radius: 25px;
 }
 @media (max-width: 768px) {
     /* Pantallas pequeñas */
@@ -492,8 +498,7 @@ ul {
     .foto img {
         max-width: 200px; /* Pntallas pequeñas */
     }
-}
-
+}  
 /* FOOTER*/
 #final {
     width: 1440px;
@@ -604,4 +609,29 @@ footer h5{
         height: auto;
     }
 }
+/* Responsive para pantallas más pequeñas */
+@media (max-width: 1200px) {
+    section {
+        padding: 0 10%;
+    }
+}
+
+@media (max-width: 992px) {
+    section {
+        padding: 0 8%;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 0 5%;
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        padding: 0 3%;
+    }
+}
+
 
